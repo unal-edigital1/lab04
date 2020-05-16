@@ -10,7 +10,7 @@ Las documentación deben estar diligencia en el archivo README.md del repositori
 Una vez clone el repositorio, realice lo siguiente:
 
 
-## Descipción 
+## Descripción 
 Se debe diseñar un banco de registro tal que:
 
 * El banco de registro debe tener 16 registros de R/W.
