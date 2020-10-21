@@ -19,9 +19,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module BancoRegistro #(      		 //   #( Parametros
-         parameter BIT_ADDR = 8,  //   BIT_ADDR Número de bit para la dirección
-         parameter BIT_DATO = 4,  //  BIT_DATO  Número de bit para el dato
-			parameter   RegFILE= "src/Reg16.men")
+         parameter BIT_ADDR = 8,  //   BIT_ADDR NÃºmero de bit para la direcciÃ³n
+         parameter BIT_DATO = 4  //  BIT_DATO  NÃºmero de bit para el dato
+	)
 	(
     input [BIT_ADDR-1:0] addrRa,
     input [BIT_ADDR-1:0] addrRb,
@@ -40,7 +40,7 @@ module BancoRegistro #(      		 //   #( Parametros
 // La cantdiad de registros es igual a: 
 localparam NREG = 2 ** BIT_ADDR;
   
-//configiración del banco de registro 
+//configiraciÃ³n del banco de registro 
 reg [BIT_DATO-1: 0] breg [NREG-1:0];
 
 
@@ -53,10 +53,6 @@ always @(posedge clk) begin
   end
 
 
-
-initial begin
-	$readmemh(RegFILE, breg);
-end
 
 endmodule
 
